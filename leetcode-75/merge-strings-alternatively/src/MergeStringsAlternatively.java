@@ -27,17 +27,17 @@ public class MergeStringsAlternatively {
         int word1Counter = 0;
         int word2Counter = 0;
 
-        for(int i = 0, j = 0; i < length1 && j < length2; i++, j++) {
+        for (int i = 0, j = 0; i < length1 && j < length2; i++, j++) {
             mergedString.append(chars1[i]).append(chars2[j]);
             word1Counter++;
             word2Counter++;
         }
 
-        if(length1 > length2) {
-            for(int i = word1Counter; i < length1; i++)
+        if (length1 > length2) {
+            for (int i = word1Counter; i < length1; i++)
                 mergedString.append(chars1[i]);
         } else if (length2 > length1) {
-            for(int i = word2Counter; i < length2; i++)
+            for (int i = word2Counter; i < length2; i++)
                 mergedString.append(chars2[i]);
         }
 
