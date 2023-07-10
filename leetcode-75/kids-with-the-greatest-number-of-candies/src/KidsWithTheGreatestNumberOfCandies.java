@@ -25,7 +25,7 @@ public class KidsWithTheGreatestNumberOfCandies {
         System.out.println(kidsWithTheGreatestNumberOfCandies.kidsWithCandies(candies, extraCandies));
     }
 
-    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+    private List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> hasGreatestNumberOfCandies = new ArrayList<>();
 
         for (int i = 0; i < candies.length; i++) {

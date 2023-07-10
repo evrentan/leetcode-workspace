@@ -1,4 +1,4 @@
-# 605. Can Place Flowers
+# [605. Can Place Flowers][question-link]
 
 You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
 
@@ -22,3 +22,5 @@ Output: false
 * flowerbed[i] is 0 or 1.
 * There are no two adjacent flowers in flowerbed.
 * 0 <= n <= flowerbed.length
+
+[question-link]: https://leetcode.com/problems/can-place-flowers/?envType=study-plan-v2&envId=leetcode-75

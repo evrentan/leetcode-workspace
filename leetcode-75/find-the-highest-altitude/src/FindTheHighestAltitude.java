@@ -14,11 +14,13 @@ public class FindTheHighestAltitude {
         for (int i = 0; i < points; i++)
             gain[i] = scanner.nextInt();
 
+        scanner.close();
+
         FindTheHighestAltitude findTheHighestAltitude = new FindTheHighestAltitude();
         System.out.println(findTheHighestAltitude.largestAltitude(gain));
     }
 
-    public int largestAltitude(int[] gain) {
+    private int largestAltitude(int[] gain) {
         List<Integer> altitudes = new ArrayList<>();
 
         altitudes.add(0);

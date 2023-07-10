@@ -22,7 +22,7 @@ public class MoveZeroes {
         System.out.println(Arrays.stream(nums).mapToObj(String::valueOf).collect(Collectors.joining(", ")));
     }
 
-    public void moveZeroes(int[] nums) {
+    private void moveZeroes(int[] nums) {
         if (nums.length == 1) return;
 
         for (int i = 0; i < nums.length; i++) {

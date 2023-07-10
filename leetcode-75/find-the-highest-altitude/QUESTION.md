@@ -1,4 +1,4 @@
-# 1732. Find the Highest Altitude
+# [1732. Find the Highest Altitude][question-link]
 
 There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
 
@@ -23,3 +23,5 @@ Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
 * n == gain.length
 * 1 <= n <= 100
 * -100 <= gain[i] <= 100
+
+[question-link]: https://leetcode.com/problems/find-the-highest-altitude/?envType=study-plan-v2&envId=leetcode-75
