@@ -15,7 +15,7 @@ public class CountingBits {
         System.out.println(Arrays.toString(countingBits.countBits(n)));
     }
 
-    public int[] countBits(int n) {
+    private int[] countBits(int n) {
         int[] integerArray = new int[n + 1];
         for (int i = 0; i < n + 1; i++)
             integerArray[i] = i;
