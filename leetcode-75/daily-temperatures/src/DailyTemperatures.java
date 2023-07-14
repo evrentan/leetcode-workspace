@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class DailyTemperatures {
     public static void main(String[] args) {
@@ -15,12 +16,29 @@ public class DailyTemperatures {
             temperatures[i] = scanner.nextInt();
 
         scanner.close();
-        
+
+        //73 74 75 71 69 72 76 73
         DailyTemperatures dailyTemperatures = new DailyTemperatures();
         System.out.println(Arrays.toString(dailyTemperatures.dailyTemperatures(temperatures)));
     }
 
     private int[] dailyTemperatures(int[] temperatures) {
+        int temperaturesLength = temperatures.length;
+        int[] answerArray = new int[temperaturesLength];
+        Stack<Integer> temperatureStack = new Stack<>();
+
+        for (int i = 0; i < temperaturesLength; i++) {
+            while (!temperatureStack.empty() && temperatures[i] > temperatures[temperatureStack.peek()]) {
+                int index = temperatureStack.pop();
+                answerArray[index] = i - index;
+            }
+            temperatureStack.push(i);
+        }
+
+        return answerArray;
+    }
+
+    private int[] dailyTemperaturesForLoop(int[] temperatures) {
 
         int temperaturesLength = temperatures.length;
 
