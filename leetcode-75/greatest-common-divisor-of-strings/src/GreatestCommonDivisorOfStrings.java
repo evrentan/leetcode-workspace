@@ -16,7 +16,7 @@ public class GreatestCommonDivisorOfStrings {
         System.out.println(greatestCommonDivisorOfStrings.gcdOfStrings(str1, str2));
     }
 
-    public String gcdOfStrings(String str1, String str2) {
+    private String gcdOfStrings(String str1, String str2) {
 
         if (str1.length() < str2.length())
             return gcdOfStrings(str2, str1);

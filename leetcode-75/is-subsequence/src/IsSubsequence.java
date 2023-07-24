@@ -15,7 +15,7 @@ public class IsSubsequence {
         System.out.println(isSubsequence.isSubsequence(s, t));
     }
 
-    public boolean isSubsequence(String s, String t) {
+    private boolean isSubsequence(String s, String t) {
 
         int sCheck = 0;
         int tCheck = 0;
