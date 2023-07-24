@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class IsSubsequence {
@@ -18,31 +17,16 @@ public class IsSubsequence {
 
     public boolean isSubsequence(String s, String t) {
 
-        char[] sChars = s.toCharArray();
-        char[] tChars = t.toCharArray();
-        int[] position = new int[sChars.length];
+        int sCheck = 0;
+        int tCheck = 0;
 
-        Arrays.fill(position, -1);
+        while (sCheck < s.length() && tCheck < t.length()) {
+            if (s.charAt(sCheck) == t.charAt(tCheck))
+                sCheck++;
 
-        for (int i = 0; i < sChars.length; i++) {
-            for (int j = 0; j <tChars.length; j++) {
-                if (sChars[i] == tChars[j]) {
-                    position[i] = j;
-                    tChars[j] = 0;
-                    break;
-                }
-            }
+            tCheck++;
         }
 
-        for (int i = 0; i < position.length; i++) {
-            if (position[i] == -1)
-                return false;
-            for (int j = i + 1; j < position.length; j ++) {
-                if (position[i] > position[j])
-                    return false;
-            }
-        }
-
-        return true;
+        return sCheck == s.length();
     }
 }
