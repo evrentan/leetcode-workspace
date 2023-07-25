@@ -20,6 +20,8 @@ public class SearchSuggestionsSystem {
         System.out.print("Enter search word: ");
         String searchWord = scanner.next();
 
+        scanner.close();
+
         SearchSuggestionsSystem searchSuggestionsSystem = new SearchSuggestionsSystem();
         System.out.println(searchSuggestionsSystem.suggestedProducts(products, searchWord));
     }
