@@ -16,12 +16,10 @@ public class ReverseWordsInAString {
         String[] strings = s.trim().split("\\s+");
         StringBuilder stringBuilder = new StringBuilder();
 
-        for (int i = strings.length - 1; i >= 0; i--) {
-            if (i == strings.length - 1)
-                stringBuilder.append(strings[i]);
-            else
-                stringBuilder.append(String.format(" %s", strings[i]));
-        }
+        stringBuilder.append(strings[strings.length - 1]);
+
+        for (int i = strings.length - 2; i >= 0; i--)
+            stringBuilder.append(String.format(" %s", strings[i]));
 
         return stringBuilder.toString();
     }
