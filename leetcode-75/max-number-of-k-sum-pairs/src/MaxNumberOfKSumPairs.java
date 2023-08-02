@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MaxNumberOfKSumPairs {
@@ -29,7 +30,7 @@ public class MaxNumberOfKSumPairs {
 
     private void executeMaxOperationsMethod(int[] nums, int k) {
         long starMaxOperations = System.currentTimeMillis();
-        System.out.println(this.maxOperationsWithLoop(nums, k));
+        System.out.println(this.maxOperations(nums, k));
         long endMaxOperations = System.currentTimeMillis();
         System.out.println(String.format("Execution time of maxOperations method is %d.%d seconds", (endMaxOperations - starMaxOperations) / 1000, (endMaxOperations - starMaxOperations) % 1000));
     }
@@ -42,9 +43,26 @@ public class MaxNumberOfKSumPairs {
     }
 
     private int maxOperations(int[] nums, int k) {
+        Arrays.sort(nums);
 
+        int leftPosition = 0;
+        int rightPosition = nums.length - 1;
+        int maxOperations = 0;
 
-        return 0;
+        while (leftPosition < rightPosition) {
+            int sum = nums[leftPosition] + nums[rightPosition];
+
+            if (sum == k) {
+                maxOperations++;
+                leftPosition++;
+                rightPosition--;
+            } else if (sum < k)
+                leftPosition++;
+            else
+                rightPosition--;
+        }
+
+        return maxOperations;
     }
 
     private int maxOperationsWithLoop(int[] nums, int k) {
