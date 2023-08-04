@@ -28,10 +28,6 @@ Output: "abcabccdcdcdef"
 
 ### Constraints:
 
-* 0 <= n <= 105
-
-### Follow up:
-
 * 1 <= s.length <= 30
 * s consists of lowercase English letters, digits, and square brackets '[]'.
 * s is guaranteed to be a valid input.
